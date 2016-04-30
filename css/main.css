@@ -201,6 +201,12 @@ h1 {
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .hide-tablet-down {
+    display: none !important;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .hide-desktop {
     display: none;
