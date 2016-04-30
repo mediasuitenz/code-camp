@@ -338,7 +338,7 @@ section {
 }
 
 .banner-main-heading {
-  font-size: 6rem;
+  font-size: 5.8rem;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   margin-bottom: 20px;
 }
@@ -378,6 +378,35 @@ section {
   bottom: 10px;
   line-height: 1;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}
+
+/*******************************************************************************
+  Type text effect
+*******************************************************************************/
+
+.js-type-text {
+  display: inline-block;
+}
+
+.text-cursor {
+  display: inline-block;
+  width: 40px;
+  height: 7px;
+  background: #fff;
+  -webkit-animation: blink 1s steps(5, start) infinite;
+  animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }
 
 /*******************************************************************************
