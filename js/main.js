@@ -20,4 +20,22 @@ $(document).ready(function () {
   $(window).resize(function () {
     setBannerHeight()
   })
+
+  // Type title text effect:
+  $('.js-type-text').each(function () {
+    var t = $(this)
+    var textToType = t.data('text')
+    var i = 1;
+    if (textToType.length) {
+      var interval = setInterval(function (){
+        addLetter(t, textToType, i)
+        if (i === textToType.length) clearInterval(interval)
+        i++
+      }, 100)
+    }
+  })
+
+  function addLetter (textElement, phrase, curLetterCount) {
+    textElement.html(phrase.substring(0, curLetterCount))
+  }
 })
