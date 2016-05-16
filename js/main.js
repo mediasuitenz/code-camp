@@ -3,6 +3,29 @@ $(document).ready(function () {
   // Image cover plugin in
   $('.js-image-fill').imgLiquid()
 
+  // Smooth scroll links
+  $('.js-smooth-scroll').click(function (e) {
+    e.preventDefault()
+    var target = $($(this).attr('href'))
+    if (target.length) {
+      var scrollTo = target.offset().top
+      $('body, html').animate({ scrollTop: scrollTo + 'px' }, 800)
+      $('#menu-wrap').removeClass('active')
+    }
+  })
+
+  // Mobile menu toggle
+  $('.js-toggle-menu').click(function (e) {
+    e.preventDefault()
+    target = $($(this).attr('href'))
+    if (!target.length) return
+    if (target.hasClass('active')) {
+      target.removeClass('active')
+    } else {
+      target.addClass('active')
+    }
+  })
+
   // Set banner height to be 100% of viewport height
   function setBannerHeight () {
     $('.banner').css('height', ($(window).height() - 50) + 'px')
