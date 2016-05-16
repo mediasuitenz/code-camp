@@ -13,6 +13,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Hind:400,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/timetablejs.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -22,7 +23,7 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header>
+    <header id="page-header">
       <div class="max-1240">
         <a href="#main" id="hd-logo"><i class="icon-tent"></i> Christchurch Code Camp 2016</a>
         <a href="#" class="menu-trigger hide-desktop"><i class="icon-menu"></i></a>
@@ -30,7 +31,7 @@
     </header>
 
     <main id="main">
-      <section class="banner">
+      <section class="banner page-section">
         <div class="banner-image"></div>
         <div class="max-1240">
           <div class="banner-text">
@@ -40,18 +41,25 @@
               <span class="text-cursor hide-tablet-down"></span>
             </h1>
             <h2 class="banner-sub-heading">
-              <span class="banner-sub-heading-section"><i class="icon-calendar text-blue"></i> 16 May, 2016</span>
-              <a class="banner-sub-heading-section" href="https://www.google.co.nz/maps?q=ARA&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiao9u0pLDMAhWCIKYKHbgPABUQ_AUIBygB" target="_blank"><i class="icon-location text-blue"></i> ARA Institute of Technology</a>
-              <a class="banner-sub-heading-section" href="#"><i class="icon-ticket text-blue"></i> Register now</a>
+              <span class="banner-sub-heading-section"><i class="icon-calendar text-blue"></i> Saturday 18 June, 2016</span>
+              <a class="banner-sub-heading-section" href="https://www.google.co.nz/maps?q=ARA&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiao9u0pLDMAhWCIKYKHbgPABUQ_AUIBygB" target="_blank"><i class="icon-location text-blue"></i> ARA Institute of Canterbury</a>
+              <a class="banner-sub-heading-section" href="https://www.eventbrite.com/e/code-camp-christchurch-2016-tickets-25153356366?aff=eac2" target="_blank"><i class="icon-ticket text-blue"></i> Register now</a>
             </h2>
             <p class="banner-blurb">It's on again! Every year we find the best developers to come and share their knowledge with you&hellip;</p>
           </div>
           <a href="#" class="next-panel"><i class="icon-down"></i></a>
         </div>
       </section>
-      <section>
+      <section class="page-section">
         <div class="max-1240">
-          <h2>This is the second section</h2>
+          <h2>Speakers</h2>
+        </div>
+      </section>
+      <section class="page-section">
+        <div class="max-1240">
+          <h2>Event Timetable</h2>
+          <p>View the schedule of events below or download a copy of the <a href="#">event timetable</a>.</p>
+          <div class="timetable"></div>
         </div>
       </section>
     </main>
@@ -59,6 +67,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
+    <script src="js/vendor/timetable.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
