@@ -259,7 +259,7 @@ h1 {
   Header
 *******************************************************************************/
 
-header {
+#page-header {
   position: fixed;
   z-index: 999;
   top: 0;
@@ -270,7 +270,7 @@ header {
   color: #fff;
 }
 
-header a {
+#page-header a {
   color: #fff;
 }
 
@@ -291,8 +291,11 @@ header a {
   height: 100%;
 }
 
-section {
+.page-section {
   overflow: hidden;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 300px;
 }
 
 .banner {
@@ -416,6 +419,53 @@ section {
 }
 
 /*******************************************************************************
+  Timetable
+*******************************************************************************/
+
+.time-entry {
+  font-weight: 700;
+}
+
+.all-streams {
+  height: calc(400% + 2px) !important;
+}
+
+.time-entry.keynote,
+.time-entry.wrap-up {
+  background: #666;
+}
+
+.time-entry.keynote:hover,
+.time-entry.wrap-up:hover {
+  background: #666;
+}
+
+.time-entry.lunch,
+.time-entry.lunch:hover,
+.time-entry.coffee,
+.time-entry.coffee:hover {
+  background: #D7D7D7;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.time-entry.ss1-talk {
+  background-color: #5AC8F2;
+}
+
+.time-entry.ss2-talk {
+  background-color: #687EF4;
+}
+
+.time-entry.sql-talk {
+  background-color: #FFCF58;
+}
+
+.time-entry.windows-talk {
+  background-color: #FFAF58;
+}
+
+/*******************************************************************************
   Media Queries
 *******************************************************************************/
 
@@ -459,7 +509,7 @@ section {
 
 @media screen and (max-width: 1024px) {
 
-  header {
+  #page-header {
     position: fixed;
   }
 
