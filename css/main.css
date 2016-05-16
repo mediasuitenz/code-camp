@@ -282,19 +282,95 @@ h1 {
   height: 50px;
   background: #111;
   color: #fff;
-}
-
-#page-header a {
-  color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #hd-logo {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 2rem;
   line-height: 50px;
   font-weight: 300;
+  color: #fff;
 }
+
+/*******************************************************************************
+  Menu
+*******************************************************************************/
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu a {
+  display: block;
+  line-height: 50px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Mobile Menu */
+@media screen and (max-width: 767px) {
+
+  .menu-trigger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 100%;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2rem;
+  }
+
+  #menu-wrap {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    -webkit-transition: max-height 500ms ease;
+    transition: max-height 500ms ease;
+  }
+
+  #menu-wrap.active {
+    max-height: 400px;
+  }
+
+  .menu a {
+    display: block;
+    color: #00b7ff;
+    padding: 15px 20px;
+    line-height: 1;
+    border-bottom: 1px solid #ddd;
+  }
+
+}
+
+/* Menu on portrait tablet up */
+@media screen and (min-width: 768px) {
+
+  .menu-trigger {
+    display: none;
+  }
+
+  #menu-wrap {
+    float: right;
+  }
+
+  .menu li {
+    display: inline-block;
+  }
+
+}
+
 
 /*******************************************************************************
   Main
@@ -690,18 +766,6 @@ h1 {
 
   #page-header {
     position: fixed;
-  }
-
-  .menu-trigger {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    height: 100%;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 2rem;
   }
 
   .banner {
