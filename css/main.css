@@ -81,6 +81,10 @@ h1 {
   max-width: 1240px;
 }
 
+.max-960 {
+  max-width: 960px;
+}
+
 .text-white {
   color: #fff;
 }
@@ -133,6 +137,10 @@ h1 {
   width: 25%;
 }
 
+.col-1-5 {
+  width: 20%;
+}
+
 .col-3-4 {
   width: 75%;
 }
@@ -163,6 +171,10 @@ h1 {
 
 .float-right {
   float: right;
+}
+
+.align-center {
+  text-align: center;
 }
 
 .margin-btm-10 {
@@ -245,15 +257,17 @@ h1 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-tent:before { content: '\e800'; }
-.icon-menu:before { content: '\e801'; }
-.icon-down:before { content: '\e802'; }
-.icon-ticket:before { content: '\e803'; }
-.icon-mail:before { content: '\e804'; }
-.icon-twitter:before { content: '\e805'; }
-.icon-up:before { content: '\e806'; }
-.icon-location:before { content: '\e807'; }
-.icon-calendar:before { content: '\e808'; }
+.icon-tent:before { content: '\e800'; } /* '' */
+.icon-menu:before { content: '\e801'; } /* '' */
+.icon-down:before { content: '\e802'; } /* '' */
+.icon-ticket:before { content: '\e803'; } /* '' */
+.icon-mail:before { content: '\e804'; } /* '' */
+.icon-twitter:before { content: '\e805'; } /* '' */
+.icon-up:before { content: '\e806'; } /* '' */
+.icon-location:before { content: '\e807'; } /* '' */
+.icon-calendar:before { content: '\e808'; } /* '' */
+.icon-close:before { content: '\e809'; } /* '' */
+.icon-chat:before { content: '\e80a'; } /* '' */
 
 /*******************************************************************************
   Header
@@ -293,9 +307,10 @@ h1 {
 
 .page-section {
   overflow: hidden;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  min-height: 300px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 200px;
+  border-bottom: 1px dashed rgba(0,0,0,0.1);
 }
 
 .banner {
@@ -465,6 +480,160 @@ h1 {
   background-color: #FFAF58;
 }
 
+.timetable-key {
+  display: none;
+}
+
+.key-item {
+  border-left-width: 30px;
+  border-left-style: solid;
+  padding-left: 10px;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.ss1-key {
+  border-color: #5AC8F2;
+}
+
+.ss2-key {
+  border-color: #687EF4;
+}
+
+.sql-key {
+  border-color: #FFCF58;
+}
+
+.windows-key {
+  border-color: #FFAF58;
+}
+
+.key-note {
+  margin-top: 10px;
+  font-size: 12px;
+  font-style: italic;
+  color: #666;
+}
+
+/*******************************************************************************
+  Speakers
+*******************************************************************************/
+
+.speaker {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.speaker-image {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.speaker-image:before {
+  content: 'View Talk Details...';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 60px 15px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  background: rgba(0, 183, 255, 0.8);
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.speaker-image.js-show-overlay:hover:before {
+  opacity: 1;
+}
+
+.speaker-title,
+.speaker-title a {
+  color: #666;
+}
+
+/*******************************************************************************
+  Info Overlay
+*******************************************************************************/
+
+.js-overlay,
+.js-overlay-content {
+  display: none;
+}
+
+.js-overlay.active,
+.js-overlay-content.active {
+  display: block;
+}
+
+.details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.95);
+  color: #333;
+  overflow: auto;
+  padding: 100px 0;
+  min-height: 400px;
+}
+
+.overlay-heading {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ccc;
+  line-height: 1;
+}
+
+.overlay-heading-title {
+  display: inline-block;
+  font-size: 3rem;
+  color: #00B7FF;
+  margin: 0;
+  text-transform: uppercase;
+  max-width: calc(100% - 30px)
+}
+
+.close-overlay-icon {
+  font-size: 3rem;
+}
+
+.tle {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+}
+
+.talk-time {
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.talk-time span {
+  margin: 0 5px;
+}
+
+.talk-description {
+  line-height: 1.5;
+}
+
 /*******************************************************************************
   Media Queries
 *******************************************************************************/
@@ -505,6 +674,16 @@ h1 {
     font-size: 1.8rem;
   }
 
+  .details-overlay {
+    padding: 30px 0;
+    min-height: 0;
+  }
+
+  .overlay-heading-title,
+  .close-overlay-icon {
+    font-size: 2rem;
+  }
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -529,6 +708,58 @@ h1 {
     padding: 20px 0;
   }
 
+  .details-overlay {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .page-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .section-heading {
+    position: relative;
+    font-size: 4rem;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #444;
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  .section-heading span {
+    position: relative;
+    z-index: 5;
+    padding: 0 40px;
+    background: #fff;
+  }
+
+  .section-heading:before,
+  .section-heading:after {
+    content: '';
+    width: 45%;
+    height: 1px;
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+  }
+
+  .section-heading:before {
+    left: 0;
+  }
+
+  .section-heading:after {
+    right: 0;
+  }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -539,6 +770,23 @@ h1 {
 
   .banner-text {
     padding: 0 30px;
+  }
+
+}
+
+/* Mobile styles for timetable plugin */
+@media screen and (max-width: 960px) {
+
+  .timetable aside {
+    display: none;
+  }
+
+  .timetable section {
+    width: 100%;
+  }
+
+  .timetable-key {
+    display: block;
   }
 
 }
