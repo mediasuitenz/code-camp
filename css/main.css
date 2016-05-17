@@ -645,6 +645,45 @@ h1 {
   color: #666;
 }
 
+.showgizmo-logos {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.app-store-badge,
+.showgizmo-logo {
+  display: inline-block;
+  margin: 0 0 10px 40px;
+}
+
+.border-top {
+  padding-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+@media screen and (max-width: 767px) {
+
+  .app-store-badge,
+  .showgizmo-logo {
+    max-width: 130px;
+    margin: 0 20px
+  }
+
+}
+
+@media screen and (max-width: 560px) {
+
+  .app-store-badge,
+  .showgizmo-logo {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto 20px auto;
+  }
+
+
+}
+
+
 /*******************************************************************************
   Speakers
 *******************************************************************************/
