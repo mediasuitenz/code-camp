@@ -571,7 +571,7 @@ h1 {
 }
 
 .all-streams {
-  height: calc(400% + 2px) !important;
+  height: calc(400% + 6px) !important;
 }
 
 .time-entry.keynote,
@@ -659,6 +659,10 @@ h1 {
 .border-top {
   padding-top: 40px;
   border-top: 1px solid #ddd;
+}
+
+.timetable section {
+  overflow-y: hidden;
 }
 
 @media screen and (max-width: 767px) {
