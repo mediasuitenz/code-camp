@@ -796,15 +796,19 @@ h1 {
 .talk-time {
   text-transform: uppercase;
   color: #999;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .talk-time span {
   margin: 0 5px;
 }
 
-.talk-description {
+.talk-body {
   line-height: 1.5;
+}
+
+.talk-body h4 {
+  margin: 0 0 10px 0;
 }
 
 .twitter-link {
