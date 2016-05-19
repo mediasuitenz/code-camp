@@ -807,6 +807,37 @@ h1 {
   line-height: 1.5;
 }
 
+.twitter-link {
+  display: inline-block;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.twitter-link i {
+  display: inline-block;
+  font-size: 2rem;
+  color: #00B7FF;
+  vertical-align: middle;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.twitter-link:hover {
+  background: #00B7FF;
+  color: #fff;
+}
+
+.twitter-link:hover i {
+  color: #fff;
+}
+
 /*******************************************************************************
   Register Section
 *******************************************************************************/
