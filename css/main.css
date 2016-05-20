@@ -571,7 +571,7 @@ h1 {
 }
 
 .all-streams {
-  height: calc(400% + 2px) !important;
+  height: calc(400% + 6px) !important;
 }
 
 .time-entry.keynote,
@@ -659,6 +659,10 @@ h1 {
 .border-top {
   padding-top: 40px;
   border-top: 1px solid #ddd;
+}
+
+.timetable section {
+  overflow-y: hidden;
 }
 
 @media screen and (max-width: 767px) {
@@ -792,15 +796,50 @@ h1 {
 .talk-time {
   text-transform: uppercase;
   color: #999;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .talk-time span {
   margin: 0 5px;
 }
 
-.talk-description {
+.talk-body {
   line-height: 1.5;
+}
+
+.talk-body h4 {
+  margin: 0 0 10px 0;
+}
+
+.twitter-link {
+  display: inline-block;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.twitter-link i {
+  display: inline-block;
+  font-size: 2rem;
+  color: #00B7FF;
+  vertical-align: middle;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.twitter-link:hover {
+  background: #00B7FF;
+  color: #fff;
+}
+
+.twitter-link:hover i {
+  color: #fff;
 }
 
 /*******************************************************************************
