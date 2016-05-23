@@ -120,7 +120,7 @@ $(document).ready(function () {
   timetable.addEvent('Azure Infrastructure', 'Windows, Azure & SharePoint', new Date(2016,6,18,13,00), new Date(2016,6,18,13,55), '#azure-Infrastructure', 'windows-talk js-show-overlay')
   // 2:00 - 2:55 Session:
   timetable.addEvent('Building a large application in Azure using Angular.js - what have we learnt?', 'Software Development (stream 1)', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#azure-and-angular', 'ss1-talk js-show-overlay')
-  timetable.addEvent('Tanya Gray & Michael Trengrove', 'Software Development (stream 2)', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#tanya-gray-michael-trengrove', 'ss2-talk js-show-overlay')
+  timetable.addEvent('Tanya Gray & Michael Trengrove', 'Software Development (stream 2)', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#michael-trengrove', 'ss2-talk js-show-overlay')
   timetable.addEvent('What Database Developers need to know about Continuous Delivery', 'SQL/Business Intelligence', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#databases-and-continuous-delivery', 'sql-talk js-show-overlay')
   // Coffee Break:
   timetable.addEvent('Coffee Break', 'Software Development (stream 1)', new Date(2016,6,18,15,00), new Date(2016,6,18,15,29), '#', 'coffee all-streams')
