@@ -101,9 +101,9 @@ $(document).ready(function () {
   timetable.setScope(9, 17)
   timetable.addLocations(['Software Development (stream 1)', 'Software Development (stream 2)', 'SQL/Business Intelligence', 'Windows, Azure & SharePoint'])
   // Keynote:
-  timetable.addEvent('Keynote: Gabe Ripjma', 'Software Development (stream 1)', new Date(2016,6,18,9,30), new Date(2016,6,18,9,59), '#keynote', 'keynote all-streams js-show-overlay')
+  timetable.addEvent('Keynote: Gabe Rijpma', 'Software Development (stream 1)', new Date(2016,6,18,9,30), new Date(2016,6,18,9,59), '#keynote', 'keynote all-streams js-show-overlay')
   // 10:00 - 10:55 Session:
-  timetable.addEvent('Ben Amore', 'Software Development (stream 1)', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#tbc', 'ss1-talk js-show-overlay')
+  timetable.addEvent('Working with Tiny Teams', 'Software Development (stream 1)', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#tbc', 'ss1-talk js-show-overlay')
   timetable.addEvent('Agile Security for Web Developers', 'Software Development (stream 2)', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#kim-carter', 'ss2-talk js-show-overlay')
   timetable.addEvent('ColumnStore for BI Developers', 'SQL/Business Intelligence', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#columnstore-for-bi-developers', 'sql-talk js-show-overlay')
   timetable.addEvent('Windows 10 Device Management', 'Windows, Azure & SharePoint', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#windows-10-device-management', 'windows-talk js-show-overlay')
