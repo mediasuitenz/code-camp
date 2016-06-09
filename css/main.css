@@ -499,6 +499,13 @@ h1 {
   margin-bottom: 20px;
 }
 
+.banner-byline {
+  font-weight: 400;
+  font-family: Hind;
+  font-size: 3rem;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
 .banner-sub-heading {
   font-family: 'Hind', sans-serif;
   font-weight: 400;
