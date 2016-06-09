@@ -105,12 +105,12 @@ $(document).ready(function () {
   // 10:00 - 10:55 Session:
   timetable.addEvent('Working with Tiny Teams', 'Software Development (stream 1)', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#tbc', 'ss1-talk js-show-overlay')
   timetable.addEvent('Agile Security for Web Developers', 'Software Development (stream 2)', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#kim-carter', 'ss2-talk js-show-overlay')
-  timetable.addEvent('A Lap Around Columnstore and 2016 Operational Analytics', 'SQL/Business Intelligence', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#columnstore-for-bi-developers', 'sql-talk js-show-overlay')
+  timetable.addEvent('An Introduction & Competition to Discover SQL Server 2016', 'SQL/Business Intelligence', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#databases-and-continuous-delivery', 'sql-talk js-show-overlay')
   timetable.addEvent('Windows 10: What’s New, Lessons Learned, Security and some Tips & Tricks', 'Windows, Azure & SharePoint', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#windows-10-device-management', 'windows-talk js-show-overlay')
   // 11:00 - 11:55 Session:
   timetable.addEvent('Code Gardening - The Art of Continuous Refactoring', 'Software Development (stream 1)', new Date(2016,6,18,11,00), new Date(2016,6,18,11,55), '#code-gardening', 'ss1-talk js-show-overlay')
   timetable.addEvent('Give your Apps a Human Side with MS Cognitive Services, Bot Framework and LUIS', 'Software Development (stream 2)', new Date(2016,6,18,11,00), new Date(2016,6,18,11,55), '#vishesh-oberoi', 'ss2-talk js-show-overlay')
-  timetable.addEvent('SQL Server BI object automation using Biml', 'SQL/Business Intelligence', new Date(2016,6,18,11,00), new Date(2016,6,18,11,55), '#power-xxx', 'sql-talk js-show-overlay')
+  timetable.addEvent('A Lap Around Columnstore and 2016 Operational Analytics', 'SQL/Business Intelligence', new Date(2016,6,18,11,00), new Date(2016,6,18,11,55), '#columnstore-for-bi-developers', 'sql-talk js-show-overlay')
   timetable.addEvent('Docker, Containers, and Nano on Windows Server 2016', 'Windows, Azure & SharePoint', new Date(2016,6,18,11,00), new Date(2016,6,18,11,55), '#windows-server-2016', 'windows-talk js-show-overlay')
   // Lunch Session:
   timetable.addEvent('Lunch Break', 'Software Development (stream 1)', new Date(2016,6,18,12,00), new Date(2016,6,18,12,59), '#', 'lunch all-streams js-show-overlay')
@@ -129,7 +129,7 @@ $(document).ready(function () {
   // 3:30 - 4:25 Session:
   timetable.addEvent('Primitive Obsession: You Can Beat It', 'Software Development (stream 1)', new Date(2016,6,18,15,30), new Date(2016,6,18,16,25), '#primitive-obsession', 'ss1-talk js-show-overlay')
   timetable.addEvent('Cross-platform Mobile Development', 'Software Development (stream 2)', new Date(2016,6,18,15,30), new Date(2016,6,18,16,25), '#fred-zhang', 'ss2-talk js-show-overlay')
-  timetable.addEvent('What Database Developers need to know about Continuous Delivery', 'SQL/Business Intelligence', new Date(2016,6,18,15,30), new Date(2016,6,18,16,25), '#databases-and-continuous-delivery', 'sql-talk js-show-overlay')
+  timetable.addEvent('SQL Server 2016 BI object automation using Biml', 'SQL/Business Intelligence', new Date(2016,6,18,15,30), new Date(2016,6,18,16,25), '#power-xxx', 'sql-talk js-show-overlay')
   // Wrap up:
   timetable.addEvent('Wrap up, prize draw and final word', 'Software Development (stream 1)', new Date(2016,6,18,16,30), new Date(2016,6,18,16,45), '#', 'wrap-up all-streams js-show-overlay')
 
