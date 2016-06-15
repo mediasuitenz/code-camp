@@ -123,7 +123,7 @@ $(document).ready(function () {
   timetable.addEvent('Building a large application in Azure using Angular.js - what have we learnt?', 'Software Development (stream 1)', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#azure-and-angular', 'ss1-talk js-show-overlay')
   timetable.addEvent('Teaching a Kiwi Generation To Code', 'Software Development (stream 2)', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#michael-trengrove', 'ss2-talk js-show-overlay')
   timetable.addEvent('Hybrid Data Platform with SQL Server 2016', 'SQL/Business Intelligence', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#hybrid-data-platform', 'sql-talk js-show-overlay')
-
+  timetable.addEvent('Data pukes to data goodness - moving from numbers to meaning', 'Windows, Azure & SharePoint', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#data-pukes-to-data-goodness', 'windows-talk js-show-overlay')
   // Coffee Break:
   timetable.addEvent('Coffee Break', 'Software Development (stream 1)', new Date(2016,6,18,15,00), new Date(2016,6,18,15,29), '#', 'coffee all-streams js-show-overlay')
   // 3:30 - 4:25 Session:
