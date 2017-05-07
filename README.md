@@ -1,4 +1,4 @@
-# Code Camp 2016 Website
+# Code Camp Website
 
 Nothing too tricky here - all static markup and vanilla CSS :) Currently hosted on RackSpace.
 

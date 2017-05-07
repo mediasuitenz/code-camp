@@ -165,4 +165,10 @@ $(document).ready(function () {
   if (window.location.hash != undefined && $(window.location.hash).length) {
     openOverlay($(window.location.hash))
   }
+
+  window.onhashchange = function() {
+    if (window.location.hash != undefined && $(window.location.hash).length) {
+      openOverlay($(window.location.hash))
+    }
+  }
 })
