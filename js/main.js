@@ -67,7 +67,7 @@ $(document).ready(function () {
 
   // Overlay control
   $('body').on('click', '.js-show-overlay', function (e) {
-    e.preventDefault()
+    //e.preventDefault()
     var t = $(this)
     var target = $(t.attr('href'))
     if (!target.length) return false
@@ -84,55 +84,85 @@ $(document).ready(function () {
   })
 
   var overlay = $('.js-overlay')
+  var body = $('body')
 
   function openOverlay (elementToShow) {
+    body.addClass('hide-overflow')
     overlay.find('.active').removeClass('active')
     elementToShow.addClass('active')
     overlay.addClass('active')
   }
 
   function closeOverlay () {
+    body.removeClass('hide-overflow')
     overlay.find('.active').removeClass('active')
     overlay.removeClass('active')
+    // Reset tabs:
+    $('.js-bio-content').removeClass('js-active-tab')
+    $('.js-talk-content').addClass('js-active-tab')
+    $('.js-tab-btn.js-active').removeClass('js-active')
+    $('.js-tabs').each(function () {
+      $(this).children().eq(0).addClass('js-active')
+    })
   }
+
+  // Tabs within speaker modal
+  $('.js-tab-btn').click(function (e) {
+    e.preventDefault()
+    var t = $(this)
+    $('.js-tab-btn.js-active').removeClass('js-active')
+    t.addClass('js-active')
+    if (t.hasClass('js-show-bio')) {
+      $('.js-talk-content').removeClass('js-active-tab')
+      $('.js-bio-content').addClass('js-active-tab')
+    } else {
+      $('.js-bio-content').removeClass('js-active-tab')
+      $('.js-talk-content').addClass('js-active-tab')
+    }
+  })
 
   // Init timetable
   var timetable = new Timetable()
   timetable.setScope(9, 17)
   timetable.addLocations(['Software Development (stream 1)', 'Software Development (stream 2)', 'SQL/Business Intelligence', 'Windows, Azure & SharePoint'])
   // Keynote:
-  timetable.addEvent('Keynote: Gabe Rijpma', 'Software Development (stream 1)', new Date(2016,6,18,9,30), new Date(2016,6,18,9,59), '#keynote', 'keynote all-streams js-show-overlay')
+  timetable.addEvent('Keynote', 'Software Development (stream 1)', new Date(2017,5,13,9,30), new Date(2017,5,13,9,59), '#', 'keynote all-streams js-show-overlay')
   // 10:00 - 10:55 Session:
-  timetable.addEvent('Working with Tiny Teams', 'Software Development (stream 1)', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#tbc', 'ss1-talk js-show-overlay')
-  timetable.addEvent('Agile Security for Web Developers', 'Software Development (stream 2)', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#kim-carter', 'ss2-talk js-show-overlay')
-  timetable.addEvent('An Introduction & Competition to Discover SQL Server 2016', 'SQL/Business Intelligence', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#databases-and-continuous-delivery', 'sql-talk js-show-overlay')
-  timetable.addEvent('Windows 10: What’s New, Lessons Learned, Security and some Tips & Tricks', 'Windows, Azure & SharePoint', new Date(2016,6,18,10,00), new Date(2016,6,18,10,55), '#windows-10-device-management', 'windows-talk js-show-overlay')
+  timetable.addEvent('Coding a Conversation: MS Bot Framework and Cognitive Services', 'Software Development (stream 1)', new Date(2017,5,13,10,00), new Date(2017,5,13,10,55), '#vishesh-oberoi', 'ss1-talk js-show-overlay')
+  timetable.addEvent('Mobile Metadata And You', 'Software Development (stream 2)', new Date(2017,5,13,10,00), new Date(2017,5,13,10,55), '#alix-klingenberg', 'ss2-talk js-show-overlay')
+  timetable.addEvent('Asynchronous messaging with SQL Server Service Broker', 'SQL/Business Intelligence', new Date(2017,5,13,10,00), new Date(2017,5,13,10,55), '#martin-catherall', 'sql-talk js-show-overlay')
+  timetable.addEvent('Regan Murphy', 'Windows, Azure & SharePoint', new Date(2017,5,13,10,00), new Date(2017,5,13,10,55), '#regan-murphy', 'windows-talk js-show-overlay')
   // 11:00 - 11:55 Session:
-  timetable.addEvent('Code Gardening - The Art of Continuous Refactoring', 'Software Development (stream 1)', new Date(2016,6,18,11,00), new Date(2016,6,18,11,55), '#code-gardening', 'ss1-talk js-show-overlay')
-  timetable.addEvent('Give your Apps a Human Side with MS Cognitive Services, Bot Framework and LUIS', 'Software Development (stream 2)', new Date(2016,6,18,11,00), new Date(2016,6,18,11,55), '#vishesh-oberoi', 'ss2-talk js-show-overlay')
-  timetable.addEvent('A Lap Around Columnstore and 2016 Operational Analytics', 'SQL/Business Intelligence', new Date(2016,6,18,11,00), new Date(2016,6,18,11,55), '#columnstore-for-bi-developers', 'sql-talk js-show-overlay')
-  timetable.addEvent('Docker, Containers, and Nano on Windows Server 2016', 'Windows, Azure & SharePoint', new Date(2016,6,18,11,00), new Date(2016,6,18,11,55), '#windows-server-2016', 'windows-talk js-show-overlay')
+  timetable.addEvent('Things Senior Developers Know', 'Software Development (stream 1)', new Date(2017,5,13,11,00), new Date(2017,5,13,11,55), '#bevan-arps', 'ss1-talk js-show-overlay')
+  timetable.addEvent('Hacking and citizen science - from the paddock to PowerBI for WTF', 'Software Development (stream 2)', new Date(2017,5,13,11,00), new Date(2017,5,13,11,55), '#bryn-lewis', 'ss2-talk js-show-overlay')
+  timetable.addEvent('Split, Merge and Eliminate - An Introduction to Partitioning', 'SQL/Business Intelligence', new Date(2017,5,13,11,00), new Date(2017,5,13,11,55), '#martin-cairney', 'sql-talk js-show-overlay')
+  timetable.addEvent('Introduction to Power Apps and Flow', 'Windows, Azure & SharePoint', new Date(2017,5,13,11,00), new Date(2017,5,13,11,55), '#steve-knutson', 'windows-talk js-show-overlay')
   // Lunch Session:
-  timetable.addEvent('Lunch Break', 'Software Development (stream 1)', new Date(2016,6,18,12,00), new Date(2016,6,18,12,59), '#', 'lunch all-streams js-show-overlay')
+  timetable.addEvent('Lunch Break', 'Software Development (stream 1)', new Date(2017,5,13,12,00), new Date(2017,5,13,12,59), '#', 'lunch all-streams js-show-overlay')
   // 1:00 - 1:55 Session:
-  timetable.addEvent('From Inception to Production: A Continuous Delivery Story', 'Software Development (stream 1)', new Date(2016,6,18,13,00), new Date(2016,6,18,13,55), '#continuous-delivery', 'ss1-talk js-show-overlay')
-  timetable.addEvent('The Accidental Start-up', 'Software Development (stream 2)', new Date(2016,6,18,13,00), new Date(2016,6,18,13,55), '#accidental-startup', 'ss2-talk js-show-overlay')
-  timetable.addEvent('SQL Server 2016 reinvigorates in-house BI capability', 'SQL/Business Intelligence', new Date(2016,6,18,13,00), new Date(2016,6,18,13,55), '#sql-server-2016-bi-capability', 'sql-talk js-show-overlay')
-  timetable.addEvent('Azure Infrastructure', 'Windows, Azure & SharePoint', new Date(2016,6,18,13,00), new Date(2016,6,18,13,55), '#azure-Infrastructure', 'windows-talk js-show-overlay')
-  // 2:00 - 2:55 Session:
-  timetable.addEvent('Building a large application in Azure using Angular.js - what have we learnt?', 'Software Development (stream 1)', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#azure-and-angular', 'ss1-talk js-show-overlay')
-  timetable.addEvent('Teaching a Kiwi Generation To Code', 'Software Development (stream 2)', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#michael-trengrove', 'ss2-talk js-show-overlay')
-  timetable.addEvent('Hybrid Data Platform with SQL Server 2016', 'SQL/Business Intelligence', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#hybrid-data-platform', 'sql-talk js-show-overlay')
-  timetable.addEvent('Data pukes to data goodness - moving from numbers to meaning', 'Windows, Azure & SharePoint', new Date(2016,6,18,14,00), new Date(2016,6,18,14,55), '#data-pukes-to-data-goodness', 'windows-talk js-show-overlay')
+  timetable.addEvent('Hit the ground running, what you need to get started with Xamarin', 'Software Development (stream 1)', new Date(2017,5,13,13,00), new Date(2017,5,13,13,55), '#mahmoud-abduo', 'ss1-talk js-show-overlay')
+  timetable.addEvent('IoT and Big Data', 'Software Development (stream 2)', new Date(2017,5,13,13,00), new Date(2017,5,13,13,55), '#vishesh-and-regan', 'ss2-talk js-show-overlay')
+  timetable.addEvent('Power BI for Developers', 'SQL/Business Intelligence', new Date(2017,5,13,13,00), new Date(2017,5,13,13,55), '#peter-george', 'sql-talk js-show-overlay')
+  timetable.addEvent('Pihanga – The Journey – moving from On-Premises to the cloud with a cultural flavour .', 'Windows, Azure & SharePoint', new Date(2017,5,13,13,00), new Date(2017,5,13,13,55), '#donald-harman', 'windows-talk js-show-overlay')
+  // 2:00 - 2:30 Session:
+  timetable.addEvent('Code Club', 'Software Development (stream 1)', new Date(2017,5,13,14,00), new Date(2017,5,13,14,25), '#georgia-singleton', 'ss1-talk js-show-overlay')
+  timetable.addEvent('Beer, Bacon and Blue Teaming', 'Software Development (stream 2)', new Date(2017,5,13,14,00), new Date(2017,5,13,14,25), '#chris-campbell', 'ss2-talk js-show-overlay')
+  timetable.addEvent('Demo of SSDT and DACPACs', 'SQL/Business Intelligence', new Date(2017,5,13,14,00), new Date(2017,5,13,14,25), '#hamish-watson', 'sql-talk js-show-overlay')
   // Coffee Break:
-  timetable.addEvent('Coffee Break', 'Software Development (stream 1)', new Date(2016,6,18,15,00), new Date(2016,6,18,15,29), '#', 'coffee all-streams js-show-overlay')
-  // 3:30 - 4:25 Session:
-  timetable.addEvent('Primitive Obsession: You Can Beat It', 'Software Development (stream 1)', new Date(2016,6,18,15,30), new Date(2016,6,18,16,25), '#primitive-obsession', 'ss1-talk js-show-overlay')
-  timetable.addEvent('Cross-platform Mobile Development', 'Software Development (stream 2)', new Date(2016,6,18,15,30), new Date(2016,6,18,16,25), '#fred-zhang', 'ss2-talk js-show-overlay')
-  timetable.addEvent('SQL Server 2016 BI object automation using Biml', 'SQL/Business Intelligence', new Date(2016,6,18,15,30), new Date(2016,6,18,16,25), '#power-xxx', 'sql-talk js-show-overlay')
+  timetable.addEvent('Coffee Break', 'Software Development (stream 1)', new Date(2017,5,13,14,31), new Date(2017,5,13,14,55), '#', 'coffee all-streams js-show-overlay')
+  // 3:00 - 4:00 Session:
+  timetable.addEvent('Ask the experts (panel)', 'Software Development (stream 1)', new Date(2017,5,13,15,00), new Date(2017,5,13,15,55), '#ask-the-experts', 'ss1-talk js-show-overlay')
+  timetable.addEvent('How VSTS and Azure can help optimise and automate deployments', 'Software Development (stream 2)', new Date(2017,5,13,15,00), new Date(2017,5,13,15,55), '#hamish-watson', 'ss2-talk js-show-overlay')
+  timetable.addEvent('Next generation data warehouse automation (Case Study)', 'SQL/Business Intelligence', new Date(2017,5,13,15,00), new Date(2017,5,13,15,55), '#simon-and-nick', 'sql-talk js-show-overlay')
+  timetable.addEvent('Requirements gathering and other soft skills', 'Windows, Azure & SharePoint', new Date(2017,5,13,15,00), new Date(2017,5,13,15,55), '#dorje-mckinnon', 'windows-talk js-show-overlay')
   // Wrap up:
-  timetable.addEvent('Wrap up, prize draw and final word', 'Software Development (stream 1)', new Date(2016,6,18,16,30), new Date(2016,6,18,16,45), '#', 'wrap-up all-streams js-show-overlay')
+  timetable.addEvent('Wrap up, prize draw and final word', 'Software Development (stream 1)', new Date(2017,5,13,16,00), new Date(2017,5,13,16,15), '#', 'wrap-up all-streams js-show-overlay')
 
   var renderer = new Timetable.Renderer(timetable)
   renderer.draw('.timetable')
+
+  // Open overlay on page load if anchor present:
+  if (window.location.hash != undefined && $(window.location.hash).length) {
+    openOverlay($(window.location.hash))
+  }
 })
