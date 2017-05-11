@@ -129,7 +129,7 @@ $(document).ready(function () {
   timetable.addEvent('Keynote', 'Software Development (stream 1)', new Date(2017,5,13,9,30), new Date(2017,5,13,9,59), '#', 'keynote all-streams js-show-overlay')
   // 10:00 - 10:55 Session:
   timetable.addEvent('Coding a Conversation: MS Bot Framework and Cognitive Services', 'Software Development (stream 1)', new Date(2017,5,13,10,00), new Date(2017,5,13,10,55), '#vishesh-oberoi', 'ss1-talk js-show-overlay')
-  timetable.addEvent('Mobile Metadata And You', 'Software Development (stream 2)', new Date(2017,5,13,10,00), new Date(2017,5,13,10,55), '#alix-klingenberg', 'ss2-talk js-show-overlay')
+  timetable.addEvent('React Native', 'Software Development (stream 2)', new Date(2017,5,13,10,00), new Date(2017,5,13,10,55), '#seth-reid', 'ss2-talk js-show-overlay')
   timetable.addEvent('Asynchronous messaging with SQL Server Service Broker', 'SQL/Business Intelligence', new Date(2017,5,13,10,00), new Date(2017,5,13,10,55), '#martin-catherall', 'sql-talk js-show-overlay')
   timetable.addEvent('Azure Infrastructure 101', 'Windows, Azure & SharePoint', new Date(2017,5,13,10,00), new Date(2017,5,13,10,55), '#regan-murphy', 'windows-talk js-show-overlay')
   // 11:00 - 11:55 Session:
